@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+
+    }
+    .navbar {
+      background-color: #f2f2f2;
+      padding: 10px;
+    }
+
+    .links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+
+    }
+
+    .links li {
+      margin-right: 13px;
+      margin-left: 2rem;
+    }
+    /* Styles for the hamburger menu */
+    .toggle-menu {
+      display: none;
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    /* Media query for screens with a width up to 600 pixels */
+    @media only screen and (max-width: 600px) {
+      .links {
+        display: none;
+        flex-direction: column;
+      }
+      .toggle-menu {
+        display: block;
+      }
+
+      /* JavaScript will handle the toggle effect */
+      .show-links {
+        display: flex !important;
+      }
+    }
+
+    body {
+      background-color: linear-gradient();
+    }
+
+    .photo {
+      background: var(--color5);
+      border: 1px solid var(--color4);
+      border-radius: 50%;
+    }
+
+    .name {
+      margin: 0.8rem 0;
+    }
+
+    .position {
+      display: inline-flex;
+      font-weight: 400;
+      background: var(--color6);
+      border-radius: 8px;
+      padding: 0.6rem 0.8rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .flex {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+    }
+
+    .contactBox {
+      margin-top: 1rem;
+    }
+
+    .contactBox div {
+      margin: 0.4rem 0;
+    }
+
+    p {
+      font-size: 0.9rem;
+      font-weight: 300;
+    }
+
+    .line {
+      display: inline-block;
+      width: 90%;
+      height: 2px;
+      background: var(--color3);
+    }
+
+    .contentBox {
+      text-align: left;
+      align-items: flex-start;
+      margin-top: 1.2rem;
+      position: relative;
+    }
+
+    .contactBox h4 {
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .left {
+      width: 45%;
+    }
+
+    .right {
+      width: 40%;
+    }
+
+    .contentBox .line {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%);
+      width: 2px;
+      height: 90%;
+    }
+
+    .left div {
+      margin-bottom: 1.5rem;
+    }
+
+    h5 {
+      font-weight: 400;
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .left p {
+      display: inline;
+      color: var(--color2);
+    }
+
+    span {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: var(--color6);
+      border-radius: 3px;
+      margin-right: 0.3rem;
+    }
+
+    .right p {
+      display: inline-block;
+      background: var(--color3);
+      border-radius: 8px;
+      padding: 0.4rem 0.6rem;
+      margin: 0.3rem 0;
+    }
+
+    :root {
+      --color1: #fff;
+      --color2: #a3a3a3;
+      --color3: #334155;
+      --color4: #001020;
+      --color5: #0f172a;
+      --color6: #6528f7;
+    }
+
+
+    @media (max-width:800px) {
+      #portfolio {
+        margin: auto;
+        border-radius: 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .contactBox,
+      .contentBox {
+        flex-direction: column;
+      }
+
+      .left,
+      .right {
+        width: 100%
+      }
+
+      .contentBox .line {
+        display: none;
+      }
+    }
+
+    #portfolio {
+      max-width: 768px;
+      margin: 4rem auto;
+      padding: 2.2rem;
+      background: var(--color5);
+      box-shadow: 0 0 6px 1px #00000045;
+      border-radius: 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    #portfolio::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+    }
+
+    h1,
+    h2,
+    h4,
+    p,
+    h5 {
+      color: white;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggleMenu = document.querySelector('.toggle-menu');
+      var links = document.querySelector('.links');
+
+      toggleMenu.addEventListener('click', function () {
+        links.classList.toggle('show-links');
+      });
+    });
+  </script>
+
+  <div class="navbar">
+    <label for="toggle-menu" class="toggle-menu">&#9776;</label>
+    <ul class="links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+
+  <div id="portfolio">
+    <!-- <h1>portfolio</h1> -->
+    <img src="images/profile.jpg" alt="profile picture" width="220px" class="photo" height="240px">
+    <h1 class="name">Jeremiah Boateng</h1>
+    <h4 class="position">UI/UX Designer</h4>
+    <div class="contactBox flex">
+      <div class="email flex">
+        <img src="images/email.png" alt="" width="18px" />
+        <p>jayeblack19@gmail.com</p>
+      </div>
+      <div class="location flex">
+        <img src="images/location.jpg" alt="" width="18px" />
+        <p>Ankaful Fie,Cape Coast,Central Region</p>
+      </div>
+      <div class="phone flex">
+        <img src="images/phone.png" alt="" width="18px " />
+        <p>+233 531 399 032</p>
+      </div>
+    </div>
+    <div class="line">
+
+    </div>
+    <div class="contentBox flex">
+      <div class="left">
+        <div class="about">
+          <h4>About me</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+            odit voluptate unde? Voluptas perspiciatis, porro voluptates
+            accusantium et minus nihil illum, iste commodi odit cupiditate
+            dicta doloremque error culpa nisi?
+          </p>
+        </div>
+        <div class="edu">
+          <h4>Education</h4>
+          <h5>University of mines and technology</h5>
+          <span></span>
+          <p>Designer Diploma,2023</p>
+        </div>
+        <div class="exp">
+          <h4>Experience</h4>
+          <h5>UI/UX Designer</h5>
+          <span></span>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+            obcaecati odio eligendi qui quisquam recusandae distinctio
+            delectus quidem.
+          </p>
+          <h5>Graphic Designer</h5>
+          <span></span>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Asperiores, sint itaque. Corrupti placeat error sapiente dolore
+            minima.
+          </p>
+        </div>
+      </div>
+      <div class="line"></div>
+      <div class="right">
+        <h4>Skills & Tools</h4>
+        <div class="DSBox">
+          <h5>Designing Softwares</h5>
+          <div class="DSNames">
+            <p>Adobe Photoshop</p>
+            <p>Adobe Illustration</p>
+            <p>Adobe XD</p>
+            <p>Figma</p>
+          </div>
+        </div>
+        <div class="LBox">
+          <h5>Languages</h5>
+          <div class="LNames">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Javascript</p>
+            <p>Python</p>
+            <p>C++</p>
+          </div>
+        </div>
+        <d iv class="ESBox">
+          <h5>Editing Softwares</h5>
+          <div class="ESNames">
+            <p>Adobe Premiere</p>
+            <p>Adobe After Effects</p>
+            <p>CapCut</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

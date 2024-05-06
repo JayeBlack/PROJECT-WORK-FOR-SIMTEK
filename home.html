@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="all">
+      <div class="navbar">
+        <div class="logo">
+          <img src="images/Untitled-1.png" alt="" />
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="links">
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="home.html">Home</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="right">
+          <img
+            src="images/Absolute_Reality_v16_Create_a_striking_portrait_image_of_a_vib_1.jpg"
+            alt=""
+          />
+        </div>
+        <div class="left-side">
+          <h2 id="noclick">Software Engineer</h2>
+          <div class="bio">
+            <h1>Hello there, I'm Jeremiah Boateng</h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Inventore fugit vel quibusdam assumenda saepe quam aspernatur quo
+              error cupiditate, esse eum debitis? Quos rem pariatur dicta.
+              Recusandae debitis consequatur explicabo architecto error
+              repudiandae laudantium, aperiam aut aliquid deleniti
+              exercitationem consectetur mollitia animi velit perferendis
+              facilis nihil nulla ducimus voluptas, dolorum dolore libero
+              aliquam! Laudantium architecto maxime, voluptatibus eius rem ipsa!
+            </p>
+          </div>
+
+          <div class="buttons">
+            <button>
+              <a id="hover" href=""><h2>Download CV</h2></a>
+            </button>
+            <button>
+              <a id="hover" href=""><h2>Hire Me Now</h2></a>
+            </button>
+            <div class="icons">
+              <a href=""><img src="images/twitter.png" alt="" /></a>
+              <a href=""
+                ><img
+                  id="tiktok"
+                  src="images/sm-icons-facebook-logo.png"
+                  alt=""
+              /></a>
+              <a href=""><img src="images/insta_logo.webp" alt="" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const links = document.querySelector(".links ul");
+
+        hamburger.addEventListener("click", function () {
+          links.classList.toggle("show");
+        });
+      });
+    </script>
+  </body>
+</html>

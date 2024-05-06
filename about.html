@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About_Page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Arial", sans-serif;
+        background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+
+       }
+
+      .navbar {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 1rem;
+        /* background-color: rgba(255, 255, 255, 0.9); */
+        border-radius: 0 0 15px 15px;
+      }
+
+      .logo img {
+        width: 140px;
+        height: auto;
+      }
+
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+      }
+
+      .hamburger span {
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: white;
+        margin-bottom: 4px;
+        border-radius: 2px;
+      }
+
+      .links {
+        display: flex;
+        list-style: none;
+      }
+
+      .links ul {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      .links ul li {
+        margin: 0 12px;
+        font-size: 16px;
+        list-style: none;
+
+      }
+
+      .links ul li a {
+        text-decoration: none;
+        color: #4717e5;
+      }
+
+      .bg_ab {
+        position: relative;
+      }
+
+      .bg_ab img {
+        width: 100%;
+        height: auto;
+        filter: blur(2px);
+      }
+
+      #who {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 4vw;
+        color: white;
+        text-align: center;
+      }
+
+      .left-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .left-logo img {
+        width: 80vw;
+        max-width: 28rem;
+        height: auto;
+        border-radius: 20px;
+        margin-top: 8vw;
+        margin-bottom: 4vw;
+      }
+
+      .right-side {
+        width: 80vw;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      #mission {
+        font-size: 3.2vw;
+        margin-bottom: 2vw;
+      }
+
+      #para {
+        font-size: 1.8vw;
+        color: black;
+        line-height: 1.6;
+      }
+
+      .footer {
+        background-color: rgb(62, 21, 81);
+        width: 100%;
+        position: relative;
+        box-sizing: border-box;
+        margin-top: 8vw;
+        padding: 4vw;
+        text-align: center;
+      }
+
+      .footer h2,
+      p {
+        color: white;
+      }
+
+      .footer h2 {
+        font-size: 3.6vw;
+        margin-bottom: 1.5vw;
+      }
+
+      .footer p {
+        font-size: 1.8vw;
+        margin-bottom: 2vw;
+      }
+
+      #fbutton:hover {
+        background-color: rgb(88, 3, 88);
+      }
+
+      #fbutton a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer button {
+        padding: 1.1vw;
+        border-radius: 1.6vw;
+        font-size: 2.5vw;
+        background-color: rgba(214, 148, 14, 0.805);
+        transition: background-color 0.27s;
+      }
+
+      @media screen and (max-width: 600px) {
+        .left-logo img {
+          margin-top: 10vw;
+          margin-bottom: 2vw;
+          margin-left: 0;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .navbar {
+          justify-content: space-between;
+        }
+
+        .links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: rgba(255, 255, 255, 0.9);
+          border-radius: 0 0 0 15px;
+          padding: 1rem;
+        }
+
+        .links.show {
+          display: flex;
+        }
+
+        .hamburger {
+          display: flex;
+          color: white;
+        }
+
+        .bg_ab img {
+          height: auto;
+        }
+
+        #who {
+          top: 50%;
+          font-size: 6vw;
+        }
+
+        .left-logo img {
+          margin-top: 10vw;
+          margin-bottom: 2vw;
+          margin-left: 0;
+        }
+
+        #mission {
+          font-size: 8vw;
+        }
+
+        #para {
+          font-size: 4vw;
+        }
+
+        .footer {
+          margin-top: 15vw;
+          padding: 8vw;
+        }
+
+        .footer h2 {
+          font-size: 6vw;
+          margin-bottom: 2vw;
+        }
+
+        .footer p {
+          font-size: 3vw;
+          margin-bottom: 3vw;
+        }
+
+        .footer button {
+          padding: 4vw;
+          border-radius: 2vw;
+          font-size: 4vw;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .hamburger {
+          display: none;
+        }
+
+        .navbar {
+          justify-content: flex-end;
+        }
+
+        .links {
+          display: flex;
+        }
+
+        .left-logo {
+          margin-left: 9rem;
+          display: flex;
+          flex-direction: row;
+        }
+
+        .right-side {
+          margin-left: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="sum">
+      <div class="navbar">
+        <div class="links">
+          <ul>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="home.html">Home</a></li>
+          </ul>
+        </div>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+      <div class="bg_ab">
+        <img src="images/about_bg.jpg" alt="" />
+        <h1 id="who">WHO ARE WE?</h1>
+      </div>
+      <div class="size">
+        <div class="left-logo">
+          <img src="images/about_logo.jpg" alt="" />
+          <div class="right-side">
+            <h1 id="mission">Our Mission</h1>
+            <p id="para">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              consequatur quibusdam assumenda ut earum provident pariatur
+              blanditiis inventore beatae quia! Voluptatum, saepe omnis?
+              Voluptas architecto deleniti error, assumenda sequi pariatur.
+            </p>
+          </div>
+        </div>
+        <div class="footer">
+          <h2>TALK TO US</h2>
+          <p>
+            Have any questions? We are always open to talk about your
+            business,<br />
+            new projects, creative opportunities and how we can help you.
+          </p>
+          <button id="fbutton"><a href="">GET IN TOUCH</a></button>
+        </div>
+      </div>
+    </div>
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const links = document.querySelector(".links");
+
+      hamburger.addEventListener("click", () => {
+        links.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>

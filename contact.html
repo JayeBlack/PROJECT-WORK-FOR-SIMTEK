@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+        color: white;
+        margin: 0;
+      }
+
+      .container {
+        margin: 20px;
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+
+      .toggle-menu {
+        display: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+      }
+
+      .links {
+        display: flex;
+        gap: 20px;
+        flex-direction: row-reverse;
+      }
+
+      .links a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+      }
+
+      .content {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .left,
+      .right {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 20px;
+        margin: 10px;
+        flex: 1;
+      }
+
+      .left input,
+      .left textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 5px;
+      }
+      .left button{
+        padding: 0.6vw;
+        font-size: 1.2rem;
+        border-radius: 6.3px;
+        width: 4.6rem;
+        color: white;
+        background-color: blueviolet;
+        transition: 0.7s;
+      }
+      .left button:hover{
+        background-color: #ffaf7b;
+      }
+
+      .left textarea {
+        resize: vertical;
+      }
+
+      .right .info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .right h2 {
+        font-size: 1.5rem;
+        color: black;
+      }
+
+      .right p {
+        font-size: 1.2rem;
+        color: black;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .social-icons img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+      }
+
+      /* Media Queries */
+      @media screen and (max-width: 768px) {
+        .toggle-menu {
+          display: block;
+        }
+
+        .links {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          right: 0;
+          background-color: #333;
+          padding: 10px;
+          border-radius: 0 0 10px 10px;
+        }
+
+        .links.show {
+          display: flex;
+        }
+
+        .content {
+          flex-direction: column;
+        }
+
+        .left,
+        .right {
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Contact Me</h1>
+        <div class="toggle-menu">&#9776;</div>
+        <div class="links">
+          <a href="contact.html">Contact</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="about.html">About</a>
+          <a href="home.html">Home</a>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="left">
+          <input type="text" placeholder="Your Name" />
+          <input type="number" placeholder="Phone Number" />
+          <input type="email" placeholder="Email" />
+          <textarea placeholder="Your Message"></textarea>
+          <button>send</button>
+        </div>
+
+        <div class="right">
+          <div class="info">
+            <div>
+              <h2>Email</h2>
+              <p>jayeblack19@gmail.com</p>
+            </div>
+            <div>
+              <h2>Phone</h2>
+              <p>+233531399032</p>
+            </div>
+            <div>
+              <h2>Address</h2>
+              <p>Tarkwa Umat Road, Grace Star Hostel</p>
+            </div>
+          </div>
+
+          <div class="social-icons">
+            <img src="images/sm-icons-facebook-logo.png" alt="Facebook" />
+            <img src="images/twitter.png" alt="Twitter" />
+            <img src="images/sm-icons-tiktok-logo.png" alt="TikTok" />
+            <img src="images/insta_logo.webp" alt="Instagram" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const toggleMenu = document.querySelector(".toggle-menu");
+      const links = document.querySelector(".links");
+
+      toggleMenu.addEventListener("click", () => {
+        links.classList.toggle("show");
+      });
+    </script>
+  </body>
+</html>
